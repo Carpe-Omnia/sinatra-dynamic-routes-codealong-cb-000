@@ -21,7 +21,7 @@ class App < Sinatra::Base
   get '/multiply/:num1/:num2' do
     @num_one = params[:num1]
     @num_two = params[:num2]
-    @product = @num_one * @num_two
+    @product = @num_one.to_i * @num_two.to_i
     "#{@product}"
   end
 
